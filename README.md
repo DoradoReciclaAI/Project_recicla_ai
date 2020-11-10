@@ -18,15 +18,18 @@ Estudiantes y desarrolladores de tecnología interesados en la elaboración de s
 ## Descripción de las fuentes de información:
 1. TrashNet
 
-  a. Fuente definitiva
-  b. Datos abiertos: https://github.com/garythung/trashnet
-  c. Set de datos de 2527 imágenes y 6 clasificaciones
-    1. 501 vidrio
-    2. 594 papel
-    3. 403 cartón
-    4. 482 plástico
-    5. 410 metal
-    6. 137 Basura
+    a. Fuente definitiva
+  
+    b. Datos abiertos: https://github.com/garythung/trashnet
+  
+    c. Set de datos de 2527 imágenes y 6 clasificaciones
+      1. 501 vidrio
+      2. 594 papel
+      3. 403 cartón
+      4. 482 plástico
+      5. 410 metal
+      6. 137 Basura
+  
   d. Tiene un artículo de investigación anexo: http://cs229.stanford.edu/proj2016/poster/ThungYang-ClassificationOfTrashForRecyclabilityStatus-poster.pdf
 
 2. Kaggle: Waste Classification data
