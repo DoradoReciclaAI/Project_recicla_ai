@@ -16,7 +16,7 @@ Al realizar un sistema de fácil implementación que permitiera clasificar de ma
 Estudiantes y desarrolladores de tecnología interesados en la elaboración de sistemas robóticos que permitan una separación efectiva de RSU.
 
 ## Descripción de las fuentes de información:
-*1. TrashNet*
+1. TrashNet
     
     a. Fuente definitiva
     
