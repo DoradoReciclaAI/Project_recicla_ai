@@ -40,8 +40,9 @@ Estudiantes y desarrolladores de tecnología interesados en la elaboración de s
     b. Datos abiertos: https://www.kaggle.com/techsash/waste-classification-data
     
     c. Set de datos de 22,500 imágenes con dos clasificaciones
-        1. Orgánico
-        2. Inorgánico
+        
+      1. Orgánico
+      2. Inorgánico
     
     d. Tiene Notebooks de referencia relacionados: https://www.kaggle.com/techsash/waste-classification-data/notebooks
 
