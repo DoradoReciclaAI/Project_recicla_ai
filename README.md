@@ -23,6 +23,7 @@ Estudiantes y desarrolladores de tecnología interesados en la elaboración de s
     b. Datos abiertos: https://github.com/garythung/trashnet
   
     c. Set de datos de 2527 imágenes y 6 clasificaciones
+      
       1. 501 vidrio
       2. 594 papel
       3. 403 cartón
