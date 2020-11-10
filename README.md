@@ -19,7 +19,6 @@ Estudiantes y desarrolladores de tecnología interesados en la elaboración de s
 1. TrashNet
 
     a. Fuente definitiva
-  
     b. Datos abiertos: https://github.com/garythung/trashnet
   
     c. Set de datos de 2527 imágenes y 6 clasificaciones
