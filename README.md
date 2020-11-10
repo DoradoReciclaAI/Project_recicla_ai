@@ -30,13 +30,17 @@ Estudiantes y desarrolladores de tecnología interesados en la elaboración de s
       5. 410 metal
       6. 137 Basura
   
-  d. Tiene un artículo de investigación anexo: http://cs229.stanford.edu/proj2016/poster/ThungYang-ClassificationOfTrashForRecyclabilityStatus-poster.pdf
+    d. Tiene un artículo de investigación anexo: http://cs229.stanford.edu/proj2016/poster/ThungYang-ClassificationOfTrashForRecyclabilityStatus-poster.pdf
 
 2. Kaggle: Waste Classification data
-  a. Fuente definitiva
-  b. Datos abiertos: https://www.kaggle.com/techsash/waste-classification-data
-  c. Set de datos de 22,500 imágenes con dos clasificaciones
-    1. Orgánico
-    2. Inorgánico
-  d. Tiene Notebooks de referencia relacionados: https://www.kaggle.com/techsash/waste-classification-data/notebooks
+
+    a. Fuente definitiva
+    
+    b. Datos abiertos: https://www.kaggle.com/techsash/waste-classification-data
+    
+    c. Set de datos de 22,500 imágenes con dos clasificaciones
+        1. Orgánico
+        2. Inorgánico
+    
+    d. Tiene Notebooks de referencia relacionados: https://www.kaggle.com/techsash/waste-classification-data/notebooks
 
