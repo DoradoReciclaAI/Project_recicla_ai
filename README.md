@@ -16,7 +16,8 @@ Al realizar un sistema de fácil implementación que permitiera clasificar de ma
 Estudiantes y desarrolladores de tecnología interesados en la elaboración de sistemas robóticos que permitan una separación efectiva de RSU.
 
 ## Descripción de las fuentes de información:
-**1. TrashNet**
+*1. TrashNet*
+    
     a. Fuente definitiva
     
     b. Datos abiertos: https://github.com/garythung/trashnet
@@ -31,7 +32,8 @@ Estudiantes y desarrolladores de tecnología interesados en la elaboración de s
   
     d. Tiene un artículo de investigación anexo: http://cs229.stanford.edu/proj2016/poster/ThungYang-ClassificationOfTrashForRecyclabilityStatus-poster.pdf
 
-**2. Kaggle: Waste Classification data**
+2. Kaggle: Waste Classification data
+    
     a. Fuente definitiva
     
     b. Datos abiertos: https://www.kaggle.com/techsash/waste-classification-data
