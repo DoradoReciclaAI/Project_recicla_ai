@@ -67,12 +67,21 @@ En esta sección se creará un Endpoint de inferencia de SageMaker en base a un 
  1. Entrar a la consola de Amazon SageMaker y en el menú Instancias de
     bloc de notas seleccionar la opción Crear instancia de bloc de
     notas.
+    
+    ![altText](readme/images/rest_api_1_1.png "title") 
+    
  2. Colocar un nombre representativo y en el campo Tipo de instancia de
     bloc de notas seleccionar la opción ml.t2.medium. Deja el resto de
     configuración con la información que viene por defecto y al final da
     clic en Crear instancia de bloc de notas
+
+    ![altText](readme/images/rest_api_1_2.png)<!-- .element height="50%" width="50%" --> 
+
  3. Espera hasta que el estatus cambie a ‘InService’ y abre el Notebook
     en JupyterLab 
+
+    ![altText](readme/images/rest_api_1_3.png "title"){:height="50%" width="50%"} 
+
  4. Importar el notebook deploy_end_point.ipynb que está
         en esta misma carpeta seleccionando el Kernel conda_tensorflow2_p36.
  5. Ejecutar el notebook siguiendo las instrucciones.
@@ -85,13 +94,25 @@ En esta sección se creará un Endpoint de inferencia de SageMaker en base a un 
 En esta sección se creará la función lambda que recibirá una imágen, realizará el preprocesamiento correspondiente y llamará al Endpoint de inferencia de SageMaker. Luego retornará el resultado de dicha inferencia.
 
  1. Ingresar a la consola de AWS Lambda y seleccionar la opción Crear
-    una función
+    una función.
+    
+    ![altText](readme/images/rest_api_2_1.png "title") 
+    
  2. Dentro de la información básica, colocar el nombre y en lenguaje
     seleccionar Python 3.6
- 3. Hacer click en el botón Crear función
+    
+    ![altText](readme/images/rest_api_2_2.png "title") 
+    
+ 3. Hacer click en el botón Crear función.
+ 
+    ![altText](readme/images/rest_api_2_3.png "title") 
+    
  4. Dentro del combo Acciones, seleccionar la opción Cargar un archivo
     .zip y seleccionar el archivo lambda_function.zip que está en el
     drive.
+
+    ![altText](readme/images/rest_api_2_4.png "title") 
+    
  5. En la sección Variables de entorno hacer click en el botón Editar y
     luego en Agregar Variable de Entorno
  6. Agregar una variable con clave ENDPOINT_NAME y cómo valor colocar el
