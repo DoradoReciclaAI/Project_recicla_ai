@@ -97,7 +97,7 @@ En esta sección se creará un Endpoint de inferencia de SageMaker en base a un 
 
     ![](rest_api/images/rest_api_1_3.png)
 
- 4. Importar el notebook deploy_end_point.ipynb que está
+ 4. Importar el notebook [deploy_end_point.ipynb](https://github.com/DoradoReciclaAI/Project_recicla_ai/blob/main/rest_api/notebooks/deploy_end_point.ipynb)   que está
         en esta misma carpeta seleccionando el Kernel conda_tensorflow2_p36.
  5. Ejecutar el notebook siguiendo las instrucciones.
  6. En el menú lateral, seleccione la opción Inferencia, Puntos de
