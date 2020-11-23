@@ -61,6 +61,21 @@ Cualquier persona con conocimientos suficientes en desarrollo web y uso de APIs,
 
 # Creación y Configuración REST-API
 
+En esete apartado se indicará cómo dejamos en nuestro caso en producción el sistema de clasificación de basura. La solución es un API rest que recibe la imágen adjunta en el request y retorna una respuesta en JSON con la clasificación obtenida y la probabilidad que el modelo indicó sobre dicha clasificación.
+
+Los pasos que se siguieron para implementar el API son los siguietnes.
+
+ 1. Se implenmentó, entrenó y ajustó el modelo con las librerías de TensorFlow Keras para Python.
+ 2. Se exportó el modelo ya entrenado al formato Protobuf.
+ 3. Se desplegó el modelo y un EndPoint de inferencia en AWS SageMaker.
+ 4. Se creó una función Lambda en AWS que recibe una imágen, ejecuta el preprocesado correspondiente, la envía al EndPoint de SageMaker y retorna la respuesta de dicho EndPoint.
+ 5. Se desplegó un API REST con AWS API Gateway que recibe la imágen adjunta en la solicitud HTTP POST, invoca a la función Lambda y retorna el resultado de la predicción en formato JSON.
+
+
+   ![](rest_api/images/rest_api_0_1.png) 
+   
+A continuación se indica el procedimiento mdiante el cuál se podrá replicar nuestra API en cualqueir entorno AWS. Cabe destacar qeu también se puede utilizar cualquier parte de la solución por separado.
+
 ## Despliegue Endpoint de SageMaker<a name="despliegue-enpoint"></a>
 En esta sección se creará un Endpoint de inferencia de SageMaker en base a un modelo exportado previamente entrenado. La creación se la realizará mediante un Notebook con código Python.
 
@@ -68,19 +83,19 @@ En esta sección se creará un Endpoint de inferencia de SageMaker en base a un 
     bloc de notas seleccionar la opción Crear instancia de bloc de
     notas.
     
-    ![](readme/images/rest_api_1_1.png) 
+    ![](rest_api/images/rest_api_1_1.png) 
     
  2. Colocar un nombre representativo y en el campo Tipo de instancia de
     bloc de notas seleccionar la opción ml.t2.medium. Deja el resto de
     configuración con la información que viene por defecto y al final da
     clic en Crear instancia de bloc de notas
 
-    ![](readme/images/rest_api_1_2.png)
+    ![](rest_api/images/rest_api_1_2.png)
 
  3. Espera hasta que el estatus cambie a ‘InService’ y abre el Notebook
     en JupyterLab 
 
-    ![](readme/images/rest_api_1_3.png)
+    ![](rest_api/images/rest_api_1_3.png)
 
  4. Importar el notebook deploy_end_point.ipynb que está
         en esta misma carpeta seleccionando el Kernel conda_tensorflow2_p36.
@@ -96,22 +111,22 @@ En esta sección se creará la función lambda que recibirá una imágen, realiz
  1. Ingresar a la consola de AWS Lambda y seleccionar la opción Crear
     una función.
     
-    ![](readme/images/rest_api_2_1.png) 
+    ![](rest_api/images/rest_api_2_1.png) 
     
  2. Dentro de la información básica, colocar el nombre y en lenguaje
     seleccionar Python 3.6
     
-    ![](readme/images/rest_api_2_2.png) 
+    ![](rest_api/images/rest_api_2_2.png) 
     
  3. Hacer click en el botón Crear función.
  
-    ![](readme/images/rest_api_2_3.png) 
+    ![](rest_api/images/rest_api_2_3.png) 
     
  4. Dentro del combo Acciones, seleccionar la opción Cargar un archivo
     .zip y seleccionar el archivo lambda_function.zip que está en el
     drive.
 
-    ![](readme/images/rest_api_2_4.png) 
+    ![](rest_api/images/rest_api_2_4.png) 
     
  5. En la sección Variables de entorno hacer click en el botón Editar y
     luego en Agregar Variable de Entorno
@@ -130,23 +145,23 @@ En esta sección se asignan los permisos necesarios para que la función Lambda 
     la función y en el campo Entidades de Confianza dice Servicio de
     AWS: lambda
 
-    ![](readme/images/rest_api_3_2.png) 
+    ![](rest_api/images/rest_api_3_2.png) 
 
  3. Seleccionar la opción Añadir una política insertada
 
-    ![](readme/images/rest_api_3_3.png) 
+    ![](rest_api/images/rest_api_3_3.png) 
 
  4. En servicio seleccionar la opción SageMaker, en acciones seleccionar
     la opción InvokeEndpoint y en Recursos seleccionar Todos los
     recursos
 
-    ![](readme/images/rest_api_3_4.png) 
+    ![](rest_api/images/rest_api_3_4.png) 
 
  5. Hacer click en la opción Revisar la política
  6. Agregar el nombre correspondiente y hacer click en el botón Crear
     una política
 
-    ![](readme/images/rest_api_3_6.png) 
+    ![](rest_api/images/rest_api_3_6.png) 
 
 ## Creación Api Gateway
 En esta sección se creará el Api Gateway que será el Api REST que recibirá las solicitudes HTTP con la imagen a clasificar y retornará en formato json la clasificación correspondiente y el porcentaje de certeza de dicha clasificaión. 
@@ -155,36 +170,36 @@ En esta sección se creará el Api Gateway que será el Api REST que recibirá l
     Seleccionar la opción Crear del tipo API REST.
  2. Ingresar el nombre elegido y presionar el botón Crear API.
 
-    ![](readme/images/rest_api_4_2.png) 
+    ![](rest_api/images/rest_api_4_2.png) 
 
  3. En el combo Acciones seleccionar la opción Crear	método.
 
-    ![](readme/images/rest_api_4_3.png) 
+    ![](rest_api/images/rest_api_4_3.png) 
 
  4. Seleccionar la opción POST y hacer click en el botón con tilde.
 
-    ![](readme/images/rest_api_4_4.png) 
+    ![](rest_api/images/rest_api_4_4.png) 
 
  5. En Tipo de integración seleccionar la opción Función Lambda.
 
-    ![](readme/images/rest_api_4_5.png) 
+    ![](rest_api/images/rest_api_4_5.png) 
 
  6. En el campo Función Lambda elegir la función creada en el paso
     anterior y hacer click en el botón Guardar.
  7. Hacer click en la sección Solicitud de integración y en Plantillas
     de mapeo.
 
-    ![](readme/images/rest_api_4_7.png) 
+    ![](rest_api/images/rest_api_4_7.png) 
 
  8. Hacer click en Agregar Plantilla de mapeo y colocar el Content-Type
     image/jpeg.
 
-    ![](readme/images/rest_api_4_8.png) 
+    ![](rest_api/images/rest_api_4_8.png) 
 
  9. Al hacer click en el botón con el tilde, aparecerá un popup con un
     alerta, seleccionar la opción No, usar configuración actual.
 
-    ![](readme/images/rest_api_4_9.png) 
+    ![](rest_api/images/rest_api_4_9.png) 
 
  10. En el cuerpo de la plantilla agregar el siguiente contenido:
 
@@ -195,32 +210,32 @@ En esta sección se creará el Api Gateway que será el Api REST que recibirá l
     }
 
 
-   ![](readme/images/rest_api_4_10.png) 
+   ![](rest_api/images/rest_api_4_10.png) 
 
  11. Seleccionar la opción Configuración del menú izquierdo e ir a la
      sección Tipos de medios binarios.
 
-   ![](readme/images/rest_api_4_11.png) 
+   ![](rest_api/images/rest_api_4_11.png) 
 
  12. Hacer click en el botón Agregar tipo de medios binarios y colocar
      el valor image/jpeg.
 
-   ![](readme/images/rest_api_4_12.png) 
+   ![](rest_api/images/rest_api_4_12.png) 
 
  13. Seleccionar la opción Recursos del menú izquierdo y en el combo
      Acciones seleccionar la opción Implementar la API.
 
-   ![](readme/images/rest_api_4_13.png) 
+   ![](rest_api/images/rest_api_4_13.png) 
 
  14. En el combo Etapa de implementación colocar el nombre que se desee
      y hacer click en el botón Implementación.
 
-   ![](readme/images/rest_api_4_14.png) 
+   ![](rest_api/images/rest_api_4_14.png) 
 
  15. Con este paso el API REST está desplegada y la url para invocar
      aparece a continuación del texto Invocar URL.
 
-   ![](readme/images/rest_api_4_15.png) 
+   ![](rest_api/images/rest_api_4_15.png) 
 
 
 ## Invocación API REST 
