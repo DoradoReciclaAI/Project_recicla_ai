@@ -1,10 +1,15 @@
-![recicla_ai](https://user-images.githubusercontent.com/74220743/100038509-ff535c00-2dd1-11eb-8a26-f9efec41cf1c.PNG)>
+![recicla_ai](https://user-images.githubusercontent.com/74220743/100038509-ff535c00-2dd1-11eb-8a26-f9efec41cf1c.PNG)
 
 
 # Tabla de contenidos
 
-1. **[Impacto social] (#head)**
-1. [Impacto social]
+1. Impacto social
+2. Descripción del problema
+3. Hipótesis
+4. Población objetivo
+5. Descripción de las fuentes de información
+6. Solución
+ 6.1 Creación rest API
 
 # Projecto Saturday AI: Recicla-IA!
 
