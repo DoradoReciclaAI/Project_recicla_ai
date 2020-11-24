@@ -1,6 +1,8 @@
+
+![](C:/Users/pc/Downloads/Grey Polygon Shape Logo.png) 
+
 # Projecto Saturday AI: Recicla-IA!
 
-## Nombre detallado del proyecto:
 Sistema para clasificación de Residuos Sólidos Urbanos
 
 ## Impacto social principal:
