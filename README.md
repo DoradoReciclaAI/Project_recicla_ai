@@ -9,7 +9,8 @@
 4. Población objetivo
 5. Descripción de las fuentes de información
 6. Solución
- 6.1 Creación rest API
+
+   6.1 Creación rest API
 
 # Projecto Saturday AI: Recicla-IA!
 
