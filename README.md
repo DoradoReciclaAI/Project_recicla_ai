@@ -4,14 +4,21 @@
 # Tabla de contenidos
 
 **1. Impacto social**
+
 **2. Descripción del problema**
+
 **3. Hipótesis**
+
 **4. Población objetivo**
+
 **5. Descripción de las fuentes de información**
+
 **6. Solución**
 
    **6.1 Creación rest API**
+   
 **7. Referencias**
+
 **8. Contacto**
 
 # Projecto Saturday AI: Recicla-IA!
@@ -284,10 +291,11 @@ Ejemplo:
 ## Autores
 
 **[Martín Iñigo](https://github.com/martininigo)**
+
 **[Andrea Escobar](https://github.com/andreaescobar111)**
+
 **[Héctor García](https://github.com/hectorgare)**
 
-hectorgare
 
 ## Contacto
 
