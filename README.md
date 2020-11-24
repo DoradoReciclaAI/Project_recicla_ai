@@ -296,6 +296,8 @@ Ejemplo:
 
 **[Héctor García](https://github.com/hectorgare)**
 
+**[Aksley Ríos](https://github.com/AksleyRios)**
+
 
 ## Contacto
 
