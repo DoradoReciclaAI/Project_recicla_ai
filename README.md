@@ -1,5 +1,4 @@
-
-![](C:/Users/pc/Downloads/Grey Polygon Shape Logo.png) 
+![recicla_ai](https://user-images.githubusercontent.com/74220743/100038509-ff535c00-2dd1-11eb-8a26-f9efec41cf1c.PNG)
 
 # Projecto Saturday AI: Recicla-IA!
 
