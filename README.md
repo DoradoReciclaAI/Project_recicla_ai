@@ -3,17 +3,16 @@
 
 # Tabla de contenidos
 
-**¿Cómo usar?**
-1. Impacto social
-2. Descripción del problema
-3. Hipótesis
-4. Población objetivo
-5. Descripción de las fuentes de información
-6. Solución
+**1. Impacto social**
+**2. Descripción del problema**
+**3. Hipótesis**
+**4. Población objetivo**
+**5. Descripción de las fuentes de información**
+**6. Solución**
 
-   6.1 Creación rest API
-7. Referencias
-8. Contacto
+   **6.1 Creación rest API**
+**7. Referencias**
+**8. Contacto**
 
 # Projecto Saturday AI: Recicla-IA!
 
@@ -24,7 +23,7 @@ Todo el material necesario para replicar el ejercicio de **Recicla.AI** se encue
 
 - La base de datos se encuentra en el repositorio mencionado en el apartado 5 de este documento (3 data set : TrashNet, Waste Classification data, Redimensión de Trashnet).
 - En la carpeta "Notebook" se encuentran los 3 modelos generados.
-- En la  carpeta "Rest_API" se encuentra el notebook de cómo se construyó la API.
+- En la  carpeta "rest_api" se encuentra el notebook de cómo se construyó la API.
 
 Si desea mayor información diríjase al apartado 8 de este documento y no dude en contactarnos.
 
@@ -285,8 +284,10 @@ Ejemplo:
 ## Autores
 
 **[Martín Iñigo](https://github.com/martininigo)**
-
 **[Andrea Escobar](https://github.com/andreaescobar111)**
+**[Héctor García](https://github.com/hectorgare)**
+
+hectorgare
 
 ## Contacto
 
