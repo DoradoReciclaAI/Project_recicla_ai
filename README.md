@@ -3,6 +3,7 @@
 
 # Tabla de contenidos
 
+**¿Cómo usar?**
 1. Impacto social
 2. Descripción del problema
 3. Hipótesis
@@ -18,6 +19,16 @@
 
 Sistema para clasificación de Residuos Sólidos Urbanos
 
+# ¿Cómo usar?
+Todo el material necesario para replicar el ejercicio de **Recicla.AI** se encuentra en este proyecto. 
+
+- La base de datos se encuentra en el repositorio mencionado en el apartado 5 de este documento (3 data set : TrashNet, Waste Classification data, Redimensión de Trashnet).
+- En la carpeta "Notebook" se encuentran los 3 modelos generados.
+- En la  carpeta "Rest_API" se encuentra el notebook de cómo se construyó la API.
+
+Si desea mayor información diríjase al apartado 8 de este documento y no dude en contactarnos.
+
+
 ## Impacto social principal:
 Medio ambiente
 
@@ -31,6 +42,9 @@ Al realizar un sistema de fácil implementación que permitiera clasificar de ma
 Estudiantes y desarrolladores de tecnología interesados en la elaboración de sistemas robóticos que permitan una separación efectiva de RSU.
 
 ## Descripción de las fuentes de información:
+
+Para el desarrollo del modelo se consideraron dos fuentes de datos "TrashNet" y "Waste Classication data". Sin embargo, para mejorar la robustez del modelo se redimensionó a una muestra de estas imágenes.
+
 1. TrashNet
     
     a. Fuente definitiva
