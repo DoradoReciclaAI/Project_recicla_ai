@@ -11,6 +11,8 @@
 6. Solución
 
    6.1 Creación rest API
+7. Referencias
+8. Contacto
 
 # Projecto Saturday AI: Recicla-IA!
 
@@ -264,7 +266,18 @@ Ejemplo:
     curl --location --request POST 'https://4b4cj4hei4.execute-api.us-east-2.amazonaws.com/beta' \
     --header 'Content-Type: image/jpeg' \
     --data-binary '@/C:/sai/waste-sorting/imagenes/O4.JPG'
-    
+
+
+## Autores
+
+**[Martín Iñigo](https://github.com/martininigo)**
+
+**[Andrea Escobar](https://github.com/andreaescobar111)**
+
+## Contacto
+
+Correo: recicla_ai@outlook.es
+
 ## Referencias
 [1] Moyer, E. (2018). Día del Reciclaje: ¿Qué tanto se recicla en América Latina?. [En línea]. Recuperado el 9 de Octubre del 2020 de https://www.nrdc.org/es/experts/erika-moyer/dia-reciclaje-tanto-recicla-america-latina#:~:text=Seg%C3%BAn%20estad%C3%ADsticas%20del%20Banco%20Mundial,menos%20430%2C000%20toneladas%20de%20basura.&text=Si%20la%20basura%20se%20separara,posible%20reciclar%20el%2030%20porciento.
 
