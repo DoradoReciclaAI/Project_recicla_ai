@@ -1,4 +1,10 @@
-![recicla_ai](https://user-images.githubusercontent.com/74220743/100038509-ff535c00-2dd1-11eb-8a26-f9efec41cf1c.PNG)
+![recicla_ai](https://user-images.githubusercontent.com/74220743/100038509-ff535c00-2dd1-11eb-8a26-f9efec41cf1c.PNG)>
+
+
+# Tabla de contenidos
+
+1. **[Impacto social] (#head)**
+1. [Impacto social]
 
 # Projecto Saturday AI: Recicla-IA!
 
@@ -7,7 +13,7 @@ Sistema para clasificación de Residuos Sólidos Urbanos
 ## Impacto social principal:
 Medio ambiente
 
-## Descripción del problema específico:
+## Descripción del problema:
 En América Latina, debido a la falta de cultura en la separación de los Residuos Sólidos Urbanos (RSU), solamente es posible reciclar el 30% de la basura generada [1].
 
 ## Hipótesis:
