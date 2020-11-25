@@ -288,6 +288,32 @@ Ejemplo:
     --data-binary '@/C:/sai/waste-sorting/imagenes/O4.JPG'
 
 
+# Implementación de brazo robótico
+Para la implementación del brazo robótico con el modelo de clasificación de basura, se realizó una integración entre el brazo robótico Braccio de Arduino, encargado de la sujeción del residuo analizado, y un Raspberry Pi 4 conectado a un módulo de visión desarrollado por nosotros, el cual permite la captura de la imágen y su envío correspondiente a partir de un método POST al API Rest explicada previamente. A continuación se presenta un diagrama que resume el sistema en cuestión.
+
+## Materiales
+1. **[Brazo robótico Braccio](https://store.arduino.cc/usa/tinkerkit-braccio)** 
+2. **[CanaKit Raspberry Pi 4](https://www.amazon.com/gp/product/B07V5JTMV9/ref=ppx_yo_dt_b_asin_title_o00_s02?ie=UTF8&psc=1)**
+3. **[Módulo de cámara Raspberry Pi 5MP](https://www.amazon.com/gp/product/B084X8MZ9J/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)**
+4. **[Arduino UNO REV3](https://store.arduino.cc/usa/arduino-uno-rev3)**
+
+## Diagrama de conexiones
+A continuación se presenta el diagrama de conexiones utilizado para el funcionamiento de los códigos presentes en la carpeta de "Códigos Brazo Robótico".
+
+## Espacio de trabajo
+Para la implementación de ejemplo realizada por el equipo, se fijó el brazo robótico, así como el módulo de visión. Cabe resaltar que el módulo de visión consiste únicamente en una caja con interior blanco, dentro de la cual se montó la cámara del Raspberry Pi, de tal manera que se tuviera un ángulo e iluminación constantes para la captura de imágen de los desechos. De igual manera, se colocaron 6 botes para separación de basura, todos dentro del área de alcance máximo del brazo robótico, conjuntando en una sola clase las categorías de papel y cartón. 
+
+## Comentarios código de Python (Procesamiento visual y llamado de API)
+Dentro del código se presentan dos métodos principales, primeramente el método para detección de objetos a partir de bordes el cual hace uso del método canny() y findEdges() de la librería OpenCV, esto para eliminar el ruido de la imágen de entrada y poder localizar el elemento con el área interna de bordes mayor, siendo en este caso correspondiente para la entrada de un objeto nuevo en el área de visión. De esta manera se genera un recuadro externo al objeto, tanto para visualización hacia el usuario como para recorte de la imágen y hacer un envío más claro al API para su posterior clasificación.
+
+En segundo lugar se tiene el método para envío de imágen a API, el cual toma la imagen previamente recortada del objeto y la envía por medio de una función POST al API Rest, esperando como respuesta la clase y el porcentaje de seguridad en formato JSON. Como comentario adicional, se agregaron indicadores en el código para hacer llamado al API únicamente después de tener un objeto detectado por más de 3 segundos, así como una restricción de no hacer una segunda llamada hasta no existir un cambio de objeto, esto con la finalidad de no hacer llamadas repetitivas e innecesarias al API.
+
+## Comentarios código de Arduino (Brazo robótico)
+El código de Arduino elaborado para el control del brazo robótico es relativamente sencillo; Consiste en la espera de la categoría por parte del Raspberry Pi, de esta manera, al recibir una categoría, el brazo ejecuta los movimientos correspondientes para depositar el desecho en el bote correspondiente. Cabe mencionar que los ángulos considerados son específicos del montaje físico con el que se trabajó, por lo cual deberán ser modificados en caso de una implementación diferente.
+
+## Resultados
+A continuación se presentan imágenes de la clasificación por parte del Raspberry Pi, así como una secuencia de movimiento del brazo robótico, aunque una demostración completa se puede encontrar en el siguiente video de YouTube. 
+
 ## Autores
 
 **[Martín Iñigo](https://github.com/martininigo)**
