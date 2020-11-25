@@ -291,6 +291,8 @@ Ejemplo:
 # Implementación de brazo robótico
 Para la implementación del brazo robótico con el modelo de clasificación de basura, se realizó una integración entre el brazo robótico Braccio de Arduino, encargado de la sujeción del residuo analizado, y un Raspberry Pi 4 conectado a un módulo de visión desarrollado por nosotros, el cual permite la captura de la imágen y su envío correspondiente a partir de un método POST al API Rest explicada previamente. A continuación se presenta un diagrama que resume el sistema en cuestión.
 
+![](Códigos_Brazo_Robótico/Images/general_diagram.png) 
+
 ## Materiales
 1. **[Brazo robótico Braccio](https://store.arduino.cc/usa/tinkerkit-braccio)** 
 2. **[CanaKit Raspberry Pi 4](https://www.amazon.com/gp/product/B07V5JTMV9/ref=ppx_yo_dt_b_asin_title_o00_s02?ie=UTF8&psc=1)**
