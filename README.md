@@ -302,8 +302,16 @@ Para la implementación del brazo robótico con el modelo de clasificación de b
 ## Diagrama de conexiones
 A continuación se presenta el diagrama de conexiones utilizado para el funcionamiento de los códigos presentes en la carpeta de "Códigos Brazo Robótico".
 
+![](Códigos_Brazo_Robótico/Images/electric_diagrama.png) 
+
 ## Espacio de trabajo
 Para la implementación de ejemplo realizada por el equipo, se fijó el brazo robótico, así como el módulo de visión. Cabe resaltar que el módulo de visión consiste únicamente en una caja con interior blanco, dentro de la cual se montó la cámara del Raspberry Pi, de tal manera que se tuviera un ángulo e iluminación constantes para la captura de imágen de los desechos. De igual manera, se colocaron 6 botes para separación de basura, todos dentro del área de alcance máximo del brazo robótico, conjuntando en una sola clase las categorías de papel y cartón. 
+
+![](Códigos_Brazo_Robótico/Images/full_setup.jpg) 
+
+![](Códigos_Brazo_Robótico/Images/inspection.jpg) 
+
+![](Códigos_Brazo_Robótico/Images/inspection_up.jpg) 
 
 ## Comentarios código de Python (Procesamiento visual y llamado de API)
 Dentro del código se presentan dos métodos principales, primeramente el método para detección de objetos a partir de bordes el cual hace uso del método canny() y findEdges() de la librería OpenCV, esto para eliminar el ruido de la imágen de entrada y poder localizar el elemento con el área interna de bordes mayor, siendo en este caso correspondiente para la entrada de un objeto nuevo en el área de visión. De esta manera se genera un recuadro externo al objeto, tanto para visualización hacia el usuario como para recorte de la imágen y hacer un envío más claro al API para su posterior clasificación.
@@ -315,6 +323,10 @@ El código de Arduino elaborado para el control del brazo robótico es relativam
 
 ## Resultados
 A continuación se presentan imágenes de la clasificación por parte del Raspberry Pi, así como una secuencia de movimiento del brazo robótico, aunque una demostración completa se puede encontrar en el siguiente video de YouTube. 
+
+![](Códigos_Brazo_Robótico/Images/full detect.gif) 
+
+![](Códigos_Brazo_Robótico/Images/full steps.gif) 
 
 ## Autores
 
