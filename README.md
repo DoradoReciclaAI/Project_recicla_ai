@@ -1,4 +1,4 @@
-![recicla_ai](https://user-images.githubusercontent.com/74220743/100038509-ff535c00-2dd1-11eb-8a26-f9efec41cf1c.PNG)
+![3](https://user-images.githubusercontent.com/74220743/100177784-b74f3a80-2ea0-11eb-99c4-c9a4f882c75b.png)
 
 
 # Tabla de contenidos
@@ -26,7 +26,7 @@
 Sistema para clasificación de Residuos Sólidos Urbanos
 
 # ¿Cómo usar?
-Todo el material necesario para replicar el ejercicio de **Recicla.AI** se encuentra en este proyecto. 
+Todo el material necesario para replicar el ejercicio de **Recicla.IA** se encuentra en este proyecto. 
 
 - La base de datos se encuentra en el repositorio mencionado en el apartado 5 de este documento (3 data set : TrashNet, Waste Classification data, Redimensión de Trashnet).
 - En la carpeta "Notebook" se encuentran los 3 modelos generados.
@@ -297,6 +297,12 @@ Ejemplo:
 **[Héctor García](https://github.com/hectorgare)**
 
 **[Aksley Ríos](https://github.com/AksleyRios)**
+
+**[Antonio Luna](https://github.com/TonyLuQ)**
+
+**[Diana López](https://github.com/dipilope)**
+
+**[Jorge Barrera](https://github.com/ivanbrij)**
 
 
 ## Contacto
