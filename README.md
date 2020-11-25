@@ -80,6 +80,22 @@ Para el desarrollo del modelo se consideraron dos fuentes de datos "TrashNet" y 
       2. Inorgánico
     
     d. Tiene Notebooks de referencia relacionados: https://www.kaggle.com/techsash/waste-classification-data/notebooks
+ 
+ 3. Dataset utilizado: Fusión de datasets previos
+    
+    a. Fuente definitiva de unión propia
+    
+    b. Datos abiertos: https://drive.google.com/drive/folders/1mjJaAUBOka2Z0g7biS1qpLAr9fOEvIzB?usp=sharing
+    
+    c. Set de datos de 7,000 imágenes con 7 clasificaciones
+       
+      1. 1,000 vidrio
+      2. 1,000 papel
+      3. 1,000 cartón
+      4. 1,000 plástico
+      5. 1,000 metal
+      6. 1,000 basura
+      7. 1,000 orgánico
     
 
 ## Descripción de la solución
