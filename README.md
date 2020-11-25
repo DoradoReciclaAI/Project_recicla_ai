@@ -15,21 +15,21 @@
 
 **6. Solución**
         
-        **6.1 Creación rest API**
+   **6.1 Creación rest API**
 
 **7. Implementación de brazo robótico**
 
-        **7.1 Materiales**
+   **7.1 Materiales**
 
-        **7.2 Diagrama de conexiones**
+   **7.2 Diagrama de conexiones**
 
-        **7.3 Espacio de trabajo**
+   **7.3 Espacio de trabajo**
 
-        **7.4 Comentarios código de Python**
+   **7.4 Comentarios código de Python**
 
-        **7.5 Comentarios código de Arduino**
+   **7.5 Comentarios código de Arduino**
 
-        **7.6 Resultados**
+   **7.6 Resultados**
    
 **8. Referencias**
 
