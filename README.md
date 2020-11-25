@@ -324,9 +324,9 @@ El código de Arduino elaborado para el control del brazo robótico es relativam
 ## Resultados
 A continuación se presentan imágenes de la clasificación por parte del Raspberry Pi, así como una secuencia de movimiento del brazo robótico, aunque una demostración completa se puede encontrar en el siguiente video de YouTube. 
 
-![](Códigos_Brazo_Robótico/Images/full detect.gif) 
+![](Códigos_Brazo_Robótico/Images/full_detect.gif) 
 
-![](Códigos_Brazo_Robótico/Images/full steps.gif) 
+![](Códigos_Brazo_Robótico/Images/full_steps.gif) 
 
 ## Autores
 
