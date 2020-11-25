@@ -31,6 +31,7 @@ Todo el material necesario para replicar el ejercicio de **Recicla.IA** se encue
 - La base de datos se encuentra en el repositorio mencionado en el apartado 5 de este documento (3 data set : TrashNet, Waste Classification data, Redimensión de Trashnet).
 - En la carpeta "Notebook" se encuentran los 3 modelos generados.
 - En la  carpeta "rest_api" se encuentra el notebook de cómo se construyó la API.
+- En la carpeta "Códigos Brazo Robótico" se encuentran los códigos de Arduino y Python realizados para la integración del sistema con Raspberry Pi y el Brazo Robótico.
 
 Si desea mayor información diríjase al apartado 8 de este documento y no dude en contactarnos.
 
