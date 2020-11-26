@@ -361,9 +361,9 @@ A continuación se presentan imágenes de la clasificación por parte del Raspbe
 
 ## Autores
 
-**[Martín Iñigo](https://github.com/martininigo)**
+**[Martín Iñigo](https://www.linkedin.com/in/martininigo/)**
 
-**[Andrea Escobar](https://github.com/andreaescobar111)**
+**[Andrea Escobar](https://www.linkedin.com/in/amescobar/)**
 
 **[Héctor García](https://github.com/hectorgare)**
 
