@@ -365,15 +365,15 @@ A continuación se presentan imágenes de la clasificación por parte del Raspbe
 
 **[Andrea Escobar](https://www.linkedin.com/in/amescobar/)**
 
-**[Héctor García](https://github.com/hectorgare)**
+**[Héctor García](https://www.linkedin.com/in/hectorgarciareynoso/)**
 
-**[Aksley Ríos](https://github.com/AksleyRios)**
+**[Aksley Ríos](https://www.linkedin.com/in/aksleyriosal/)**
 
-**[Antonio Luna](https://github.com/TonyLuQ)**
+**[Antonio Luna](https://www.linkedin.com/in/antoniolunamacias/)**
 
-**[Diana López](https://github.com/dipilope)**
+**[Diana López](https://www.linkedin.com/in/diana-l%C3%B3pez-figueroa-77614894/)**
 
-**[Jorge Barrera](https://github.com/ivanbrij)**
+**[Jorge Barrera](https://www.linkedin.com/in/jorgeivanbarrera/)**
 
 
 ## Contacto
