@@ -163,8 +163,7 @@ En esta sección se creará un Endpoint de inferencia de SageMaker en base a un 
 
     ![](rest_api/images/rest_api_1_3.png)
 
- 4. Importar el notebook [deploy_end_point.ipynb](https://github.com/DoradoReciclaAI/Project_recicla_ai/blob/main/rest_api/notebooks/deploy_end_point.ipynb)   que está
-        en esta misma carpeta seleccionando el Kernel conda_tensorflow2_p36.
+ 4. Importar el notebook [deploy_end_point.ipynb](https://github.com/DoradoReciclaAI/Project_recicla_ai/blob/main/rest_api/notebooks/deploy_end_point.ipynb) seleccionando el Kernel conda_tensorflow2_p36.
  5. Ejecutar el notebook siguiendo las instrucciones.
  6. En el menú lateral, seleccione la opción Inferencia, Puntos de
     Enlace se debería haber creado un end point nuevo, copie el nombre
@@ -189,9 +188,7 @@ En esta sección se creará la función lambda que recibirá una imágen, realiz
     ![](rest_api/images/rest_api_2_3.png) 
     
  4. Dentro del combo Acciones, seleccionar la opción Cargar un archivo
-    .zip y seleccionar el archivo lambda_function.zip que está en el
-    drive.
-
+    .zip y seleccionar el archivo [lambda_function.zip](https://github.com/DoradoReciclaAI/Project_recicla_ai/blob/main/rest_api/lambda_function.zip)
     ![](rest_api/images/rest_api_2_4.png) 
     
  5. En la sección Variables de entorno hacer click en el botón Editar y
@@ -199,6 +196,7 @@ En esta sección se creará la función lambda que recibirá una imágen, realiz
  6. Agregar una variable con clave ENDPOINT_NAME y cómo valor colocar el
     nombre del enpoint de SageMaker obtenido en el punto 6 de la sección
     anterior.
+    ![](rest_api/images/rest_api_2_5.png) 
 
 ## Asignación de permisos
 
@@ -234,74 +232,82 @@ En esta sección se creará el Api Gateway que será el Api REST que recibirá l
 
  1. Ingresar a la consola Api Gateway y seleccionar la opción Crear API.
     Seleccionar la opción Crear del tipo API REST.
- 2. Ingresar el nombre elegido y presionar el botón Crear API.
-
+    
     ![](rest_api/images/rest_api_4_2.png) 
-
- 3. En el combo Acciones seleccionar la opción Crear	método.
+    
+ 2. Ingresar el nombre elegido y presionar el botón Crear API.
 
     ![](rest_api/images/rest_api_4_3.png) 
 
- 4. Seleccionar la opción POST y hacer click en el botón con tilde.
+ 3. En el combo Acciones seleccionar la opción Crear	método.
 
     ![](rest_api/images/rest_api_4_4.png) 
 
- 5. En Tipo de integración seleccionar la opción Función Lambda.
+ 4. Seleccionar la opción POST y hacer click en el botón de 'check'.
 
     ![](rest_api/images/rest_api_4_5.png) 
 
+ 5. En Tipo de integración seleccionar la opción Función Lambda.
+
  6. En el campo Función Lambda elegir la función creada en el paso
     anterior y hacer click en el botón Guardar.
+    
+    ![](rest_api/images/rest_api_4_7.png) 
+ 
  7. Hacer click en la sección Solicitud de integración y en Plantillas
     de mapeo.
-
-    ![](rest_api/images/rest_api_4_7.png) 
-
+    
+    ![](rest_api/images/rest_api_4_8.png) 
+    
  8. Hacer click en Agregar Plantilla de mapeo y colocar el Content-Type
     image/jpeg.
 
-    ![](rest_api/images/rest_api_4_8.png) 
+    ![](rest_api/images/rest_api_4_9.png) 
 
  9. Al hacer click en el botón con el tilde, aparecerá un popup con un
     alerta, seleccionar la opción No, usar configuración actual.
 
-    ![](rest_api/images/rest_api_4_9.png) 
+   ![](rest_api/images/rest_api_4_10.png) 
 
  10. En el cuerpo de la plantilla agregar el siguiente contenido:
 
-    #set($inputRoot = $input.path('$'))
-    {
-        "json" : $input.json('$'),
-    	"body" : "$util.escapeJavaScript($input.body).replaceAll("\\'", "'")",
-    }
+        #set($inputRoot = $input.path('$'))
+        {
+                "json" : $input.json('$'),
+	        "body" : "$util.escapeJavaScript($input.body).replaceAll("\\'", "'")",
+                "headers": {
+                        #foreach($param in $input.params().header.keySet())
+                        "$param": "$util.escapeJavaScript($input.params().header.get($param))"
+                        #if($foreach.hasNext),#end
+                #end
+                        },
+                "image": "$input.params('image')"
+        }
 
-
-   ![](rest_api/images/rest_api_4_10.png) 
 
  11. Seleccionar la opción Configuración del menú izquierdo e ir a la
      sección Tipos de medios binarios.
-
-   ![](rest_api/images/rest_api_4_11.png) 
+     
+     ![](rest_api/images/rest_api_4_12.png) 
 
  12. Hacer click en el botón Agregar tipo de medios binarios y colocar
      el valor image/jpeg.
 
-   ![](rest_api/images/rest_api_4_12.png) 
+   ![](rest_api/images/rest_api_4_13.png) 
 
  13. Seleccionar la opción Recursos del menú izquierdo y en el combo
      Acciones seleccionar la opción Implementar la API.
 
-   ![](rest_api/images/rest_api_4_13.png) 
+   ![](rest_api/images/rest_api_4_14.png) 
 
  14. En el combo Etapa de implementación colocar el nombre que se desee
      y hacer click en el botón Implementación.
 
-   ![](rest_api/images/rest_api_4_14.png) 
+   ![](rest_api/images/rest_api_4_15.png) 
 
  15. Con este paso el API REST está desplegada y la url para invocar
-     aparece a continuación del texto Invocar URL.
+     aparece en la parte superior de la pantalla.
 
-   ![](rest_api/images/rest_api_4_15.png) 
 
 
 ## Invocación API REST 
