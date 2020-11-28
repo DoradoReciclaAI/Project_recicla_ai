@@ -243,7 +243,7 @@ En esta sección se creará el Api Gateway que será el Api REST que recibirá l
 
     ![](rest_api/images/rest_api_4_4.png) 
 
- 4. Seleccionar la opción POST y hacer click en el botón de 'check'.
+ 4. Seleccionar la opción POST y hacer click en el botón 'check'.
 
     ![](rest_api/images/rest_api_4_5.png) 
 
@@ -264,7 +264,7 @@ En esta sección se creará el Api Gateway que será el Api REST que recibirá l
 
     ![](rest_api/images/rest_api_4_9.png) 
 
- 9. Al hacer click en el botón con el tilde, aparecerá un popup con un
+ 9. Al hacer click en el botón 'check', aparecerá un popup con un
     alerta, seleccionar la opción No, usar configuración actual.
 
    ![](rest_api/images/rest_api_4_10.png) 
